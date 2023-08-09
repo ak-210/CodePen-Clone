@@ -18,10 +18,10 @@ export default function Editor(props) {
     return (
         <div id={name} className={`editor-card ${open ? '': 'collapsed'}`}>
             <div className='editor-title'>
-                <img src={imgSRC} />
+                <img src={imgSRC} alt={`${name} logo`}/>
                 {name}
                 <button onClick={()=>setOpen(prevOpen => !prevOpen)}>
-                    <img src={`${open?'img/arrows-fullscreen.svg':'img/fullscreen-exit.svg'}`} />
+                    <img src={`${open?'img/arrows-fullscreen.svg':'img/fullscreen-exit.svg'}`} alt={name} />
                 </button>
             </div>
             <ControlledEditor

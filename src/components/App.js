@@ -18,9 +18,11 @@ function App() {
     const timeout = setTimeout(()=>{
       setSrcDoc(`
         <html>
-          <body> ${html} </body>
           <style> ${css} </style>
-          <script> ${js} </script>
+          <body>
+            ${html}
+            <script> ${js} </script>
+          </body>
         </html>
       `)
     }, 1000)
